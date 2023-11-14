@@ -1,0 +1,131 @@
+.logoutBtn{
+    width: max-content;
+    background: indianred;
+    border: 1px solid indianred;
+}
+
+.logoutBtn:hover{
+    border: darkred;
+    background: darkred;
+}
+
+.stickyDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    z-index: 10000;
+    background: var(--card-background-color);
+    box-shadow: var(--card-box-shadow);
+    padding: 30px;
+    top: 0;
+}
+
+.header{
+
+    display: flex;
+    gap: 20px;
+}
+
+.header>img{
+    object-fit: contain;
+
+}
+
+.footer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    background: rgba(0,0, 0, 0.5);
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.login-form{
+   width: 30vw;
+}
+
+#submitFormBtn{
+    border: 1px solid mediumseagreen;
+    background: mediumseagreen;
+}
+
+#submitFormBtn:hover{
+    background: seagreen;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navBar{
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+}
+
+.username{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color);
+}
+
+#outputContainer{
+    display : none;
+    width: 100%;
+
+}
+
+.xSmall{
+    font-size: 1px;
+}
+
+.creditText{
+    color: goldenrod;
+}
+
+.tabWindow{
+    width: 100%;
+    border: 1px solid lightgray;
+}
+
+.tabNavigationBar{
+    display: flex;
+    width: 100%;
+}
+
+.tablink{
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid lightgray;
+    background: rgba(0,0,0,0.1);
+}
+
+.tablink:hover{
+    background: rgba(0,0,0,0.4);
+}
+.tablinkActive{
+    border: 3px solid  seagreen;
+    background: rgba(0,0,0,0.4);
+}
+
+select{
+    cursor: pointer;
+}
+
+#chart{
+    color: var(--color);
+}
+
