@@ -1,3 +1,7 @@
+body{
+    overflow-y: hidden;
+}
+
 .logoutBtn{
     width: max-content;
     background: indianred;
@@ -10,26 +14,42 @@
 }
 
 .stickyDiv{
+    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: sticky;
     z-index: 10000;
-    background: var(--card-background-color);
-    box-shadow: var(--card-box-shadow);
+    background: var(--pico-card-background-color);
+    box-shadow: var(--pico-card-box-shadow);
+    height: 20vh;
     padding: 30px;
     top: 0;
 }
 
 .header{
-
+    box-sizing: border-box;
+    top: 20vh;
+    height: 15vh;
     display: flex;
     gap: 20px;
 }
 
+@media screen and (max-width: 768px){
+    .header{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 .header>img{
     object-fit: contain;
+}
 
+@media screen and (max-width: 768px){
+    .header>img{
+        height: 60px;
+    }
 }
 
 .footer {
@@ -45,7 +65,7 @@
 }
 
 .login-form{
-   width: 30vw;
+   width: 50vw;
 }
 
 #submitFormBtn{
@@ -58,10 +78,14 @@
 }
 
 .formContainer{
+    box-sizing: border-box;
+    top: 35vh;
+    height: 65vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 
@@ -69,6 +93,8 @@
     display: flex;
     height: 10vh;
     justify-content: space-around;
+    background: var(--pico-card-background-color);
+    box-shadow: var(--pico-card-box-shadow);
     align-items: center;
     text-align: center;
 
@@ -81,7 +107,11 @@
 }
 
 #outputContainer{
-    display : none;
+    box-sizing: border-box;
+
+    /*top: 35vh;*/
+    /*height: 65vh;*/
+    display : block;
     width: 100%;
 
 }
@@ -129,3 +159,39 @@ select{
     color: var(--color);
 }
 
+
+#resetFormBtn{
+    border: 1px solid indianred;
+    background: indianred;
+}
+
+#resetFormBtn:hover{
+    background: darkred;
+}
+
+.scroll-section{
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.required-asterisk{
+    color: indianred;
+}
+
+/*style the scrollbar*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.3);
+}

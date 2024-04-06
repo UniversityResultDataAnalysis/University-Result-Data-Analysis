@@ -3,6 +3,8 @@ import React, {useEffect, useState} from 'react'
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 import GetExcelSheetForm from "./GetExcelSheetForm";
+import {FaUser} from "react-icons/fa";
+import {RiLogoutCircleRFill, RiLogoutCircleRLine} from "react-icons/ri";
 
 const Home = () => {
 
@@ -23,28 +25,27 @@ const Home = () => {
   return (
       <>
       <header>
-          <article >
+          <section >
           <nav className={"navBar"}>
-              <span className={"username"}>Welcome {user && user.email}</span>
+              <span className={"username"}>
+                  <FaUser />&nbsp;Welcome {user && user.email}</span>
 
               <button className={"logoutBtn"} onClick={handleLogout}>
+                  <RiLogoutCircleRLine   />&nbsp;
                   Logout
               </button>
           </nav>
-          </article>
-
-
+          </section>
 
 
       </header>
 
-          <main>
+          <section>
               <article className={"formContainer"}>
-                  <h4>Fill & Submit the Form to Retrieve the Data :</h4>
                   <GetExcelSheetForm/>
               </article>
 
-          </main>
+          </section>
 
     </>
 
