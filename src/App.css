@@ -40,9 +40,9 @@ body {
         flex-direction: row;
         gap: 10px;
     }
-    hgroup>* {
-        font-size: 0.9rem !important;
-    }
+    /*hgroup>* {*/
+    /*    font-size: 0.9rem !important;*/
+    /*}*/
 
 }
 
