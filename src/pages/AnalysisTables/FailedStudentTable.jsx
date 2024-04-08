@@ -17,6 +17,7 @@ const FailedStudentTable = ({data}) => {
                                     <th>USN</th>
                                     <th>Name</th>
                                     <th>CIE</th>
+                                    <th>SEE</th>
                                 </tr>
                                 </thead>
                                 <tbody>
