@@ -19,7 +19,6 @@ import {SlCalender} from "react-icons/sl";
 import {RiGraduationCapLine} from "react-icons/ri";
 import {MdFormatListNumbered} from "react-icons/md";
 import {GrDatabase} from "react-icons/gr";
-import passFailCountTable from "./AnalysisTables/PassFailCountTable";
 
 const GetExcelSheetForm = () => {
 
@@ -172,8 +171,8 @@ const GetExcelSheetForm = () => {
     }
 
     useEffect(() => {
-        console.log("Pass Fail Table Data : ", subjectWisePassFailCount)
-    }, [subjectWisePassFailCount])
+        console.log("Pass Grade Table Data : ", subjectWiseGradeType)
+    }, [subjectWiseGradeType])
 
 
     const handleBranchChange = (e) => {
@@ -248,6 +247,8 @@ const GetExcelSheetForm = () => {
                         <article className={"tabWindow"} id={"chart"}>
                             <ChartsTab
                                 subjectWiseAverageTableData={subjectWiseAverageTableData}
+                                passFailCountTableData={subjectWisePassFailCount}
+                                gradeTypeTableData={subjectWiseGradeType}
                             />
                         </article>
 

@@ -19,7 +19,6 @@ body{
     justify-content: space-around;
     align-items: center;
     position: sticky;
-    z-index: 10000;
     background: var(--pico-card-background-color);
     box-shadow: var(--pico-card-box-shadow);
     height: 20vh;
@@ -122,6 +121,7 @@ body{
 
 .creditText{
     color: goldenrod;
+    cursor: pointer;
 }
 
 .tabWindow{
@@ -194,4 +194,22 @@ select{
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,0.3);
+}
+
+text {
+    color: white !important;
+    fill: white !important;
+
+}
+
+.apexcharts-legend-text {
+    color: white !important;
+}
+
+.creditText:hover{
+    color: gold;
+}
+
+[data-tooltip]{
+    border: none !important;
 }

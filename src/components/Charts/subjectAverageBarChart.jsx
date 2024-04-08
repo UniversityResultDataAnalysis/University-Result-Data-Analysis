@@ -33,7 +33,7 @@ const CourseChart = ({data}) => {
                     colors: ['transparent']
                 },
                 xaxis: {
-                    categories: courses,
+                    categories: courses.map(course => course.split('-')[0])
                 },
                 yaxis: {
                     title: {
