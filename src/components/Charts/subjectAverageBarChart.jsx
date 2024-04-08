@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import Chart from 'react-apexcharts';
 
 const CourseChart = ({data}) => {
@@ -9,7 +9,7 @@ const CourseChart = ({data}) => {
 
         const courses = Object.keys(courseData);
         const avgCIE = courses.map(course => Math.round(courseData[course].avgCIE));
-        const avgSEE = courses.map(course =>Math.round(courseData[course].avgSEE));
+        const avgSEE = courses.map(course => Math.round(courseData[course].avgSEE));
         const avgCreditPoint = courses.map(course => Math.round(courseData[course].avgCreditPoint));
 
         setChartData({
@@ -42,7 +42,7 @@ const CourseChart = ({data}) => {
                 },
                 tooltip: {
                     y: {
-                        formatter: function(val) {
+                        formatter: function (val) {
                             return val
                         }
                     }
@@ -72,7 +72,7 @@ const CourseChart = ({data}) => {
     return (
         <div>
             {chartData.options && chartData.series && (
-                <Chart options={chartData.options} series={chartData.series} type="bar" height={400} />
+                <Chart options={chartData.options} series={chartData.series} type="bar" height={400}/>
             )}
         </div>
     );

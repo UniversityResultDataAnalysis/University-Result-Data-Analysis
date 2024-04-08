@@ -1,19 +1,19 @@
-body{
+body {
     overflow-y: hidden;
 }
 
-.logoutBtn{
+.logoutBtn {
     width: max-content;
     background: indianred;
     border: 1px solid indianred;
 }
 
-.logoutBtn:hover{
+.logoutBtn:hover {
     border: darkred;
     background: darkred;
 }
 
-.stickyDiv{
+.stickyDiv {
     box-sizing: border-box;
     display: flex;
     justify-content: space-around;
@@ -26,7 +26,7 @@ body{
     top: 0;
 }
 
-.header{
+.header {
     box-sizing: border-box;
     top: 20vh;
     height: 15vh;
@@ -34,19 +34,19 @@ body{
     gap: 20px;
 }
 
-@media screen and (max-width: 768px){
-    .header{
+@media screen and (max-width: 768px) {
+    .header {
         flex-direction: column;
         gap: 10px;
     }
 }
 
-.header>img{
+.header > img {
     object-fit: contain;
 }
 
-@media screen and (max-width: 768px){
-    .header>img{
+@media screen and (max-width: 768px) {
+    .header > img {
         height: 60px;
     }
 }
@@ -57,26 +57,26 @@ body{
     justify-content: center;
     align-items: center;
     left: 0;
-    background: rgba(0,0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     bottom: 0;
     width: 100%;
     text-align: center;
 }
 
-.login-form{
-   width: 50vw;
+.login-form {
+    width: 50vw;
 }
 
-#submitFormBtn{
+#submitFormBtn {
     border: 1px solid mediumseagreen;
     background: mediumseagreen;
 }
 
-#submitFormBtn:hover{
+#submitFormBtn:hover {
     background: seagreen;
 }
 
-.formContainer{
+.formContainer {
     box-sizing: border-box;
     top: 35vh;
     height: 65vh;
@@ -88,7 +88,7 @@ body{
 }
 
 
-.navBar{
+.navBar {
     display: flex;
     height: 10vh;
     justify-content: space-around;
@@ -99,83 +99,84 @@ body{
 
 }
 
-.username{
+.username {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color);
 }
 
-#outputContainer{
+#outputContainer {
     box-sizing: border-box;
 
     /*top: 35vh;*/
     /*height: 65vh;*/
-    display : block;
+    display: block;
     width: 100%;
 
 }
 
-.xSmall{
+.xSmall {
     font-size: 1px;
 }
 
-.creditText{
+.creditText {
     color: goldenrod;
     cursor: pointer;
 }
 
-.tabWindow{
+.tabWindow {
     width: 100%;
     border: 1px solid lightgray;
 }
 
-.tabNavigationBar{
+.tabNavigationBar {
     display: flex;
     width: 100%;
 }
 
-.tablink{
+.tablink {
     flex: 1;
     text-align: center;
     cursor: pointer;
     padding: 10px;
     border: 1px solid lightgray;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 
-.tablink:hover{
-    background: rgba(0,0,0,0.4);
-}
-.tablinkActive{
-    border: 3px solid  seagreen;
-    background: rgba(0,0,0,0.4);
+.tablink:hover {
+    background: rgba(0, 0, 0, 0.4);
 }
 
-select{
+.tablinkActive {
+    border: 3px solid seagreen;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+select {
     cursor: pointer;
 }
 
-#chart{
+#chart {
     color: var(--color);
 }
 
 
-#resetFormBtn{
+#resetFormBtn {
     border: 1px solid indianred;
     background: indianred;
 }
 
-#resetFormBtn:hover{
+#resetFormBtn:hover {
     background: darkred;
 }
 
-.scroll-section{
+.scroll-section {
     overflow-y: auto;
     width: 100%;
     height: 100vh;
 }
 
-.required-asterisk{
+.required-asterisk {
     color: indianred;
 }
 
@@ -183,17 +184,17 @@ select{
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 text {
@@ -206,10 +207,10 @@ text {
     color: white !important;
 }
 
-.creditText:hover{
+.creditText:hover {
     color: gold;
 }
 
-[data-tooltip]{
+[data-tooltip] {
     border: none !important;
 }

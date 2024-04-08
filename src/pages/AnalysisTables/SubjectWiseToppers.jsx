@@ -9,7 +9,7 @@ const SubjectWiseToppers = ({data}) => {
         return subject;
     });
 
-    return(
+    return (
         <details>
             <summary role="button" className="outline contrast">Subject Wise Toppers</summary>
             <div>
@@ -17,30 +17,30 @@ const SubjectWiseToppers = ({data}) => {
                     <div key={subject.subject}>
                         <h3>{subject.subject}</h3>
 
-                            <div >
-                                <table style={{borderCollapse: 'collapse', width: '100%'}}>
-                                    <thead>
-                                    <tr>
-                                        <th>Rank</th>
-                                        <th>Name</th>
-                                        <th>USN</th>
-                                        <th>Total Marks</th>
-                                        <th>Grade</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    {subject.toppers.map((topper, index) => (
+                        <div>
+                            <table style={{borderCollapse: 'collapse', width: '100%'}}>
+                                <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Name</th>
+                                    <th>USN</th>
+                                    <th>Total Marks</th>
+                                    <th>Grade</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {subject.toppers.map((topper, index) => (
                                     <tr key={index}>
                                         <td>{index + 1}</td>
                                         <td>{topper.name}</td>
                                         <td>{topper.usn}</td>
-                                        <td>{ Number(topper.subjectMarks[subject.subject].cie)  + Number(topper.subjectMarks[subject.subject].see) }</td>
+                                        <td>{Number(topper.subjectMarks[subject.subject].cie) + Number(topper.subjectMarks[subject.subject].see)}</td>
                                         <td>{topper.subjectMarks[subject.subject].grade}</td>
                                     </tr>
-                                    ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                                ))}
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
                 ))}

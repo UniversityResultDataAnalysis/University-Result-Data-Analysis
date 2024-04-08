@@ -6,7 +6,14 @@ import SubjectWiseGradeCountTable from "./AnalysisTables/SubjectWiseGradeCountTa
 import SubjectWiseToppers from "./AnalysisTables/SubjectWiseToppers";
 import FailedStudentTable from "./AnalysisTables/FailedStudentTable";
 
-const AnalysisTab = ({topperTableData,passFailCountTableData, subjectWiseAverageTableData ,subjectWiseGradeCountTableData,subjectWiseTopperData , failedStudentsData}) => {
+const AnalysisTab = ({
+                         topperTableData,
+                         passFailCountTableData,
+                         subjectWiseAverageTableData,
+                         subjectWiseGradeCountTableData,
+                         subjectWiseTopperData,
+                         failedStudentsData
+                     }) => {
 
 
     return (
@@ -22,7 +29,6 @@ const AnalysisTab = ({topperTableData,passFailCountTableData, subjectWiseAverage
             <SubjectWiseToppers data={subjectWiseTopperData}/>
 
             <FailedStudentTable data={failedStudentsData}/>
-
 
 
         </>

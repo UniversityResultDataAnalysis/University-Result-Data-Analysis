@@ -1,7 +1,7 @@
 import React from "react";
 
-const ResultDataTab = ({ data }) => {
-    return(
+const ResultDataTab = ({data}) => {
+    return (
         <>
 
             {

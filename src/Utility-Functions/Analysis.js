@@ -1,4 +1,3 @@
-
 // Function to find top 3 students based on highest SGPA value
 export function findTopStudents(data) {
     const sortedData = data.studentData.slice().sort((a, b) => b.sgpa - a.sgpa);
@@ -19,7 +18,7 @@ export function findPassedFailedCount(data, subject) {
         }
     });
 
-    return { passed: passedCount, failed: failedCount };
+    return {passed: passedCount, failed: failedCount};
 }
 
 // Function to find list of failed students in a subject
@@ -29,13 +28,17 @@ export function findFailedStudents(data, subject) {
     data.studentData.forEach(student => {
         const subjectMarks = student.subjectMarks[subject];
         if (subjectMarks && subjectMarks.grade === "F") {
-            failedStudents.push({ usn: student.usn, name: student.name, cie: student.subjectMarks[subject].cie ,see: student.subjectMarks[subject].see });
+            failedStudents.push({
+                usn: student.usn,
+                name: student.name,
+                cie: student.subjectMarks[subject].cie,
+                see: student.subjectMarks[subject].see
+            });
         }
     });
 
     return failedStudents;
 }
-
 
 
 // Function to calculate the average marks of students in each subject
@@ -45,7 +48,7 @@ export function calculateAverageMarks(data) {
     data.studentData.forEach(student => {
         Object.keys(student.subjectMarks).forEach(subject => {
             if (!averageMarks[subject]) {
-                averageMarks[subject] = { totalCIE: 0, totalSEE: 0, totalCreditPoint: 0, count: 0 };
+                averageMarks[subject] = {totalCIE: 0, totalSEE: 0, totalCreditPoint: 0, count: 0};
             }
             const marks = student.subjectMarks[subject];
             averageMarks[subject].totalCIE += marks.cie;
@@ -85,7 +88,6 @@ export function countGradeTypes(data, subject) {
 
     return gradeCounts;
 }
-
 
 
 // Function to extract an array of unique subject names from the data

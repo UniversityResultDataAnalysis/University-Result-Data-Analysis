@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import Chart from 'react-apexcharts';
 
 const PassFailChart = ({data}) => {
@@ -51,7 +51,7 @@ const PassFailChart = ({data}) => {
     return (
         <div>
             {chartData.options && chartData.series && (
-                <Chart options={chartData.options} series={chartData.series} type="bar" height={400} />
+                <Chart options={chartData.options} series={chartData.series} type="bar" height={400}/>
             )}
         </div>
     );

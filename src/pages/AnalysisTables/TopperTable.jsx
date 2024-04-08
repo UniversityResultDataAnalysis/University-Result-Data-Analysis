@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TopperTable = ({ data }) => {
+const TopperTable = ({data}) => {
     return (
         <details>
             <summary role="button" className="outline contrast">Overall Toppers</summary>

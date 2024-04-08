@@ -11,35 +11,35 @@ const SubjectWiseGradeCountTable = ({data}) => {
         return item;
     });
 
-    return(
-    <details>
-        <summary role="button" className="outline contrast">Subject Wise Grade Count</summary>
-    <table>
-        <thead>
-        <tr>
-            <th>Subject</th>
-            <th>Grades</th>
-        </tr>
-        </thead>
-        <tbody>
-        {data.map((item, index) => (
-            <tr key={index}>
-                <td>{item.subject}</td>
-                <td>
+    return (
+        <details>
+            <summary role="button" className="outline contrast">Subject Wise Grade Count</summary>
+            <table>
+                <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Grades</th>
+                </tr>
+                </thead>
+                <tbody>
+                {data.map((item, index) => (
+                    <tr key={index}>
+                        <td>{item.subject}</td>
+                        <td>
                     <span>
 
                         {Object.entries(item.gradeType).map(([grade, count], i) => (
                             <span key={i}>{`${grade} : ${count} / `}</span>
                         ))}
                     </span>
-                </td>
-            </tr>
-        ))}
-        </tbody>
-    </table>
-    </details>
-)
-    ;
+                        </td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
+        </details>
+    )
+        ;
 };
 
 export default SubjectWiseGradeCountTable;

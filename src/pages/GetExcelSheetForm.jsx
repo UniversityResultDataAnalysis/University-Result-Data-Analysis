@@ -170,9 +170,6 @@ const GetExcelSheetForm = () => {
 
     }
 
-    useEffect(() => {
-        console.log("Pass Grade Table Data : ", subjectWiseGradeType)
-    }, [subjectWiseGradeType])
 
 
     const handleBranchChange = (e) => {
