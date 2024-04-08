@@ -81,6 +81,12 @@ body {
     width: 50vw;
 }
 
+@media screen and (max-width: 768px) {
+    .login-form {
+        width: 80vw;
+    }
+}
+
 #submitFormBtn {
     border: 1px solid mediumseagreen;
     background: mediumseagreen;
@@ -228,3 +234,4 @@ text {
 [data-tooltip] {
     border: none !important;
 }
+
