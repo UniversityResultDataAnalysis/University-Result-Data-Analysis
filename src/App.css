@@ -26,6 +26,7 @@ body {
     top: 0;
 }
 
+
 .header {
     box-sizing: border-box;
     top: 20vh;
@@ -36,9 +37,13 @@ body {
 
 @media screen and (max-width: 768px) {
     .header {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
+    hgroup>* {
+        font-size: 0.9rem !important;
+    }
+
 }
 
 .header > img {
@@ -48,6 +53,15 @@ body {
 @media screen and (max-width: 768px) {
     .header > img {
         height: 60px;
+    }
+
+    .form-btn-group {
+        flex-direction: column;
+    }
+
+    .form-btn-group> button {
+    /*    wrap text*/
+        white-space: normal;
     }
 }
 
