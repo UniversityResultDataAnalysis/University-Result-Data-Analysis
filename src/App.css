@@ -78,13 +78,11 @@ body {
 }
 
 .login-form {
-    width: 50vw;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
-    .login-form {
-        width: 80vw;
-    }
+
 }
 
 #submitFormBtn {
@@ -234,4 +232,6 @@ text {
 [data-tooltip] {
     border: none !important;
 }
-
+details{
+    overflow-x: auto;
+}
