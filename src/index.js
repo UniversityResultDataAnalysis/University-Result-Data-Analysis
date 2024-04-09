@@ -6,15 +6,18 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import App from "./App";
+import ResetPassword from "./pages/ResetPassword";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<App/>}>
             <Route path="signup" element={<Signup/>}/>
             <Route path="login" element={<Login/>}/>
+            <Route path="reset-password" element={<ResetPassword/>}/>
             <Route path="/" element={<Protected/>}>
                 <Route path="/" index element={<Home/>}/>
             </Route>
+
         </Route>
     )
 );

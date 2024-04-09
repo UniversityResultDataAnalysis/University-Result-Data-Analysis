@@ -219,7 +219,6 @@ const GetExcelSheetForm = () => {
                     <button data-tooltip="Click to Navigate back to Form Page" onClick={handleGoBack}>Go Back to Form
                     </button>
                     <br></br>
-                    <br></br>
 
                     <h3>{title}</h3>
                     <div className="tabNavigationBar">

@@ -24,28 +24,14 @@ const Home = () => {
 
     return (
         <>
-            <header>
-                <section>
-                    <nav className={"navBar"}>
-              <span className={"username"}>
-                  <FaUser/>&nbsp;Welcome {user && user.email}</span>
+            <article className={"navBar"}>
+                <span className={"username"}><FaUser/>&nbsp;Welcome {user && user.email}</span>
+                <button className={"logoutBtn"} onClick={handleLogout}><RiLogoutCircleRLine/>&nbsp;Logout</button>
+            </article>
 
-                        <button className={"logoutBtn"} onClick={handleLogout}>
-                            <RiLogoutCircleRLine/>&nbsp;
-                            Logout
-                        </button>
-                    </nav>
-                </section>
-
-
-            </header>
-
-            <section>
-                <article className={"formContainer"}>
-                    <GetExcelSheetForm/>
-                </article>
-
-            </section>
+            <article className={"formContainer"}>
+                <GetExcelSheetForm/>
+            </article>
 
         </>
 

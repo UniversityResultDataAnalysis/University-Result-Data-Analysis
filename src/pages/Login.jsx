@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import {auth} from '../firebase';
+import {auth, resetPassword} from '../firebase';
 import {signInWithEmailAndPassword} from 'firebase/auth';
 import {Link, useNavigate} from 'react-router-dom';
+import {FaQuestion, FaSignInAlt} from "react-icons/fa";
+import {MdEmail, MdOutlinePassword} from "react-icons/md";
 
 const Login = () => {
 
@@ -37,21 +39,24 @@ const Login = () => {
         }
     }, []);
 
+    const resetPassword = async () => {
+
+      navigate("/reset-password")
+
+    }
+
+
     return (
-
-        <main className="container">
-            <article className="grid">
+            <article className={"full-width"}>
                 <div>
-                    <h1>Sign in</h1>
-                    {/*<hgroup>*/}
-
-                    {/*  <h2>Enter the Credentials to Login</h2>*/}
-                    {/*</hgroup>*/}
+                    <h1><FaSignInAlt /> Sign In</h1>
+                    <p>Enter your credentials to login</p>
                     <form onSubmit={handleSubmit}>
+                        <label htmlFor="email"><MdEmail /> Email</label>
                         <input
                             type="text"
                             name="login"
-                            placeholder="Username"
+                            placeholder="Enter your email address"
                             aria-label="Login"
                             value={email}
                             autocomplete="nickname"
@@ -59,10 +64,11 @@ const Login = () => {
 
                             onChange={(e) => setEmail(e.target.value)}
                         />
+                        <label htmlFor="password"><MdOutlinePassword /> Password</label>
                         <input
                             type="password"
                             name="password"
-                            placeholder="Password"
+                            placeholder="Your Password"
                             aria-label="Password"
                             value={password}
                             autocomplete="current-password"
@@ -73,10 +79,14 @@ const Login = () => {
                             <p>Need to Signup? <Link to="/signup">Create Account</Link></p>
                         </fieldset>
                         <button type="submit">Login</button>
+                        <a
+                        onClick={resetPassword}
+                        >
+                            <FaQuestion />
+                            Forgot Password?</a>
                     </form>
                 </div>
             </article>
-        </main>
 
     )
 }

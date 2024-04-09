@@ -1,5 +1,55 @@
+
+/*Global Style / Default Override */
 body {
     overflow-y: hidden;
+}
+
+[data-tooltip] {
+    border: none !important;
+}
+
+details{
+    overflow-x: auto;
+}
+
+text {
+    color: white !important;
+    fill: white !important;
+
+}
+
+.apexcharts-legend-text {
+    color: white !important;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/*Class*/
+
+/*Main Container/*/
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#canara_logo{
+    height: 8vh;
 }
 
 .logoutBtn {
@@ -13,77 +63,29 @@ body {
     background: darkred;
 }
 
-.stickyDiv {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: sticky;
-    background: var(--pico-card-background-color);
-    box-shadow: var(--pico-card-box-shadow);
-    height: 20vh;
-    padding: 30px;
-    top: 0;
-}
-
-
 .header {
     box-sizing: border-box;
-    top: 20vh;
-    height: 15vh;
+    width: 100%;
+    top:0;
+    border-bottom: 1px solid lightslategray;
+    height: 10vh;
     display: flex;
     gap: 20px;
-}
-
-@media screen and (max-width: 768px) {
-    .header {
-        flex-direction: row;
-        gap: 10px;
-    }
-    /*hgroup>* {*/
-    /*    font-size: 0.9rem !important;*/
-    /*}*/
-
-}
-
-.header > img {
-    object-fit: contain;
-}
-
-@media screen and (max-width: 768px) {
-    .header > img {
-        height: 60px;
-    }
-
-    .form-btn-group {
-        flex-direction: column;
-    }
-
-    .form-btn-group> button {
-    /*    wrap text*/
-        white-space: normal;
-    }
-}
-
-.footer {
-    position: fixed;
-    display: flex;
     justify-content: center;
     align-items: center;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+    background: var(--pico-card-background-color);
+    box-shadow: var(--pico-card-box-shadow);
+    padding: 60px;
 }
 
 .login-form {
     width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-
+.full-width {
+    width: 100%;
 }
+
 
 #submitFormBtn {
     border: 1px solid mediumseagreen;
@@ -96,19 +98,19 @@ body {
 
 .formContainer {
     box-sizing: border-box;
-    top: 35vh;
-    height: 65vh;
+    width: 100%;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 
 .navBar {
     display: flex;
     height: 10vh;
+    width: 100%;
     justify-content: space-around;
     background: var(--pico-card-background-color);
     box-shadow: var(--pico-card-box-shadow);
@@ -125,9 +127,6 @@ body {
 
 #outputContainer {
     box-sizing: border-box;
-
-    /*top: 35vh;*/
-    /*height: 65vh;*/
     display: block;
     width: 100%;
 
@@ -174,9 +173,6 @@ select {
     cursor: pointer;
 }
 
-#chart {
-    color: var(--color);
-}
 
 
 #resetFormBtn {
@@ -198,40 +194,32 @@ select {
     color: indianred;
 }
 
-/*style the scrollbar*/
-
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
-}
-
-text {
-    color: white !important;
-    fill: white !important;
-
-}
-
-.apexcharts-legend-text {
-    color: white !important;
-}
 
 .creditText:hover {
     color: gold;
 }
 
-[data-tooltip] {
-    border: none !important;
+/*Mobile Device Style*/
+@media screen and (max-width: 768px) {
+    /*.header > img {*/
+    /*    height: 60px;*/
+    /*}*/
+
+    .header {
+        flex-direction: row;
+    }
+
+    hgroup>* {
+        font-size: 0.9rem !important;
+    }
+
+    .form-btn-group {
+        flex-direction: column;
+    }
+
+    .form-btn-group> button {
+        /*    wrap text*/
+        white-space: normal;
+    }
 }
-details{
-    overflow-x: auto;
-}
+

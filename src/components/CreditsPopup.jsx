@@ -14,9 +14,6 @@ const CreditsPopup = ({dialogRef, onClose}) => {
                 <p>
                     <strong>Project Group Name : P04</strong>
                 </p>
-                <p>
-                    This Project is a part of the Academic Major Project of the Department of ISE affiliated to VTU.
-                </p>
                 <ul>
                     <li>Dept : Information Science & Engineering,CEC</li>
                 </ul>

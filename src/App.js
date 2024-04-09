@@ -21,26 +21,20 @@ function App() {
     }
 
     return (
+        <main className="container">
+            <nav className={"header"}>
+                <img id={"canara_logo"} alt="CANARA" src="https://www.canaraengineering.in//assets/images/logo.png"/>
+                <hgroup className={"app-header-text"}>
+                    <h2>University Result Data Analysis Tool</h2>
 
-        <div className="container">
-            <div className={"stickyDiv"}>
-                <nav className={"centerContainer header"}>
-                    <img alt="CANARA" src="https://www.canaraengineering.in//assets/images/logo.png"/>
-                    <hgroup>
-                        <h2>University Result Data Analysis Tool</h2>
-                        <h4 data-tooltip="Click to View Credits" onClick={onOpenCreditDialog} className={"creditText"}>
-                            <FaExternalLinkAlt/> Designed & Developed by : P04-ISE Dept</h4>
-                        <small style={{fontSize: "small"}}> &copy; All The Rights of This Project & Data are Reserved to
-                            P04 & Canara Engineering College</small>
-                    </hgroup>
-
-                </nav>
-            </div>
-
-            <br/>
+                    <small data-tooltip="Click to View Credits" onClick={onOpenCreditDialog} className={"creditText"}>
+                        <FaExternalLinkAlt/> Designed & Developed by : P04-ISE Dept</small>
+                </hgroup>
+            </nav>
             <Outlet/>
             <CreditsPopup dialogRef={dialogRef} onClose={onCloseCreditDialog}/>
-        </div>
+            <footer><small style={{fontSize: "small"}}> &copy; All The Rights of This Project & Data are Reserved to P04 & Canara Engineering College</small></footer>
+        </main>
     )
 }
 
