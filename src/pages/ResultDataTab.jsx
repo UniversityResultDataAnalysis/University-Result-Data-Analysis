@@ -11,8 +11,8 @@ const ResultDataTab = ({data}) => {
                             <section>
 
                                 <ul key={item.usn}>
-                                    <li>SGPA : {item.sgpa}</li>
-                                    <li>Percentage : {item.percentage}</li>
+                                    <li>SGPA : {item.sgpa.toFixed(2)}</li>
+                                    <li>Percentage : {item.percentage.toFixed(2)}</li>
                                     <li>Total Grade Points : {item.totalGP}</li>
                                     <li>Class : {item.classType}</li>
                                 </ul>
